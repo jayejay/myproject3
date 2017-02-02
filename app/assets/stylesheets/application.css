@@ -13,12 +13,3 @@
  *= require_tree .
  *= require_self
  */
-body{
-	background-color: silver;
-}
-
-nav ul li{
-	display: inline-block;
-	padding: 2%;
-}
-

@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myproject3</title>
-    <%= csrf_meta_tags %>
+    
+    <title>myproject3</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   </head>
 
   <body>
-	  <nav>
-		  <ul>
-			  <li>Home</li>
-			  <li>About</li>
-			  <li>Contact</li>
-		  </ul>
+	  
+    <nav class="navigation navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+    	  <ul class="nav nav-pills">
+  			  <li><a href="#">Home</a></li>
+  			  <li><a href="#">About</a></li>
+  			  <li><a href="#">Contact</a></li>
+  		  </ul>
+      </div>
 	  </nav>
 	  
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-    <footer>
-    	&copy; Jay
-    </footer>
+    
+      <footer class="footer">
+        <div class="container">
+        	<p>&copy; Jay</p>
+        </div>
+      </footer>
+ 
 
   </body>
 </html>

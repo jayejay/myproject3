@@ -1,0 +1,24 @@
+body{
+	margin-top: 70px;
+}
+
+body>.container{
+	padding-top: 60px;
+}
+
+.navbar-default{
+	background-color: rgba(255,255,255,0.8);
+}
+
+.nav-pills li a{
+	font-size: 1.5em;
+}
+
+.product {
+	margin-top: 2%;
+	border: 0.5px solid;
+}
+
+.product-image{
+	border-left: 0.5px solid;	
+}

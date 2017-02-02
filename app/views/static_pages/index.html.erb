@@ -1,5 +1,25 @@
 <h1>Welcome to my shop</h1>
 <h2>Have fun shopping</h2>
-<p>The date and time is <%= Time.now %></p>
-<% test_variable = 42 %>
-<%= test_variable - 2 %>
+
+<div class="product row">
+	
+	<div class="col-md-6">
+		<p>
+			<strong>
+				Get my Software. It will help you doing your tasks.
+				It will do the follwing tasks for you:
+			</strong>
+		</p>
+		<p>	
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		</p>
+		
+	</div>	
+
+	<div class="col-md-6 product-image">
+		<%= image_tag("software.jpg", class: "img-responsive") %>
+		<button class="btn btn-success pull-right">Buy</button>
+	</div>
+
+</div>
