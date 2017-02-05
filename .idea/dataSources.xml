@@ -7,5 +7,13 @@
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Rails myproject3: development" uuid="8280789d-cc7b-46f0-bafb-466294acb1cc">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Jay\Google Drive\CF-Projects\myproject3\db\development.sqlite3</jdbc-url>
+    </data-source>
   </component>
 </project>
