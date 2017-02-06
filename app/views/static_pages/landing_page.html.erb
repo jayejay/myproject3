@@ -1,0 +1,5 @@
+<h2>Featured Product:</h2>
+<p><%= @featured_product.name %></p>
+<p><%= @featured_product.description %></p>
+<%= image_tag(@featured_product.image_url, class: "img-responsive") %>
+<p><%= @featured_product.price %>$</p>
