@@ -2,10 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product{
-  background-color: rgb(225, 229, 237);
-}
+.product{ background-color: rgb(225, 229, 237); }
 
 .products-row{
-  margin-top: 2%;
+  margin-top: 1%;
+
+}
+
+
+.product-column{
+  margin-top:2%;
+  padding: 1%;
+  min-height: 687px;
 }

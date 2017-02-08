@@ -1,3 +1,16 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carousel-indicators li{
+  border: 1px solid rgb(0,0,0);
+}
+
+.carousel-indicators .active{
+  background-color: rgba(0,0,0,0.1);
+}
+
+.carousel-caption p{
+  font-size: 1.5em;
+  color: silver;
+}
