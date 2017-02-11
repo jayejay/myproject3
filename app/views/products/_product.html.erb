@@ -6,15 +6,17 @@
 
     <p><strong>Available Mediums:</strong> <%=product.mediums%></p>
 
-    <%= image_tag(product.image_url, class: "img-responsive") %>
-
     <p><strong>Price: </strong><%= product.price %>$</p>
 
+    <%= image_tag(product.image_url, class: "img-responsive") %>
+
+    <div class="buttons">
 
       <%= link_to 'Show', product, :class => 'btn btn-success' %>
       <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-warning' %>
       <%= link_to 'Destroy', product, :class => 'btn btn-danger', method: :delete,
                   data: { confirm: 'Are you sure?' } %>
+    </div>
   </div>
 
 </div>

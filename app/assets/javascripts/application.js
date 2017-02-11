@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.matchHeight
 //= require turbolinks
 //= require_tree .
+
+// $(function(){
+//     $('.product-column').matchHeight();
+//     console.log("hallo");
+// });

@@ -6,12 +6,20 @@
 
 .products-row{
   margin-top: 1%;
-
 }
-
 
 .product-column{
   margin-top:2%;
   padding: 1%;
-  min-height: 687px;
+}
+
+@media only screen and (min-width:988px){
+  .product-column{
+    min-height: 575px;
+  }
+}
+
+.buttons{
+  position: absolute;
+  bottom: 5%;
 }
