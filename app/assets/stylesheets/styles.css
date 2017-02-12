@@ -40,3 +40,8 @@ ul{
 	margin-top: 2%;
 }
 
+/*footer*/
+.footer-links{
+    list-style-type: none;
+}
+

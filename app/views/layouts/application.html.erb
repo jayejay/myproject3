@@ -51,9 +51,22 @@
 
     
       <footer class="footer">
-        <div class="container">
+        <div class="container-fluid">
         	<hr>
-          <p>&copy; Jay</p>
+
+          <div class="col-md-8 col-xs-12">
+            <ul class="footer-links list-group pull-left">
+              <li class="list-group-item"><%= link_to "Home", root_path %></li>
+              <li class="list-group-item"><%= link_to "About me", static_pages_about_path %></li>
+              <li class="list-group-item"><%= link_to "All Products", products_path %></li>
+              <li class="list-group-item"><%= link_to "Contact me", static_pages_contact_path %></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 col-xs-12">
+            <p class="pull-right">&copy; Jay</p>
+          </div>
+
         </div>
       </footer>
  
