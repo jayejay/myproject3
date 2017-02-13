@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users
+
   root 'static_pages#landing_page'
 
   #root 'products#index'
