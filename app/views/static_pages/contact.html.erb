@@ -1,2 +1,23 @@
-<h2>Send me a Mail</h2>
-<p>You want to trade? Go ahead. I'm waiting for your message</p>
+<h2>Send us a Mail</h2>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <div class="form-group">
+          <%= label_tag :name %>
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :email, "Email Address" %>
+          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :message %>
+          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+        </div>
+      </div>
+    </div>
+    <%= submit_tag "Send", class:"btn btn-success"%>
+<% end %>
