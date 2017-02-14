@@ -20,7 +20,7 @@
   </head>
 
   <body>
-	  
+
     <nav class="navigation navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -55,8 +55,15 @@
         </div>
       </div><!--end fluid container-->
 	  </nav>
-    <p class="notice"><%=	 notice %></p>
-    <p class="alert"><%=	 alert %></p>
+
+    <% if notice %>
+      <p id="notice" class="alert alert-info"><%= notice %></p>
+    <% end %>
+
+
+    <% if alert %>
+      <p id="alert" class="alert alert-info"><%= alert %></p>
+    <% end %>
 
     <div class="container">
       <%=link_to 'Back', :back %>
@@ -76,6 +83,7 @@
             <li class="list-group-item"><%= link_to "About me", static_pages_about_path %></li>
             <li class="list-group-item"><%= link_to "All Products", products_path %></li>
             <li class="list-group-item"><%= link_to "Contact me", static_pages_contact_path %></li>
+            <li class="list-group-item"><%= link_to "Users", users_path %></li>
           </ul>
         </div>
 

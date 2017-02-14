@@ -1,3 +1,16 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index_users th{
+  padding-right: 2%;
+  font-size: 1.5em;
+  border-bottom: solid 1px;
+  padding-bottom: 2%;
+}
+
+.index_users td{
+  padding-top: 2%;
+  font-size: 1.5em;
+  border-bottom: solid 1px;
+}
