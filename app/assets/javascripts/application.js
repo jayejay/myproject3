@@ -15,3 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('turbolinks:load',function(){
+    $('.product-column').matchHeight();
+});
