@@ -7,7 +7,8 @@
     <p><strong>Available Mediums:</strong> <%=product.mediums%></p>
 
     <p><strong>Price: </strong><%= product.price %>$</p>
-
+    <div class="rated stars" data-score="<%=	product.average_rating  %>"></div>
+    <hr>
     <%= image_tag(product.image_url, class: "img-responsive") %>
 
     <div class="buttons">

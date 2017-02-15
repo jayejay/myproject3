@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
   resources :users
 
   root 'static_pages#landing_page'
 
-  #root 'products#index'
+  resources :products do
+    resources :comments
+  end
 
-  resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
 
   post 'static_pages/thank_you', to: 'static_pages#thank_you'
