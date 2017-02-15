@@ -8,4 +8,7 @@
         <p><%= comment.body %></p>
       </div>
   <% end %>
+  <div class="apple_pagination">
+    <%= will_paginate @comments %>
+  </div>
 </div>
