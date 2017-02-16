@@ -5,7 +5,15 @@ class UserMailer < ApplicationMailer
     @message = message
     mail(:from => email,
          :to => 'julianeissing@web.de',
-         :subject => "A new contact form message from #{name}")
+         :subject => "A new contact form message from #{name}"
+    )
+  end
+
+  def welcome(user)
+    @appname = "Soft-Shop"
+    mail( :to => user.email,
+          :subject => "Welcome Buddy to #{@appname}!"
+    )
   end
 
 end
