@@ -43,12 +43,15 @@
               <%=	 text_field_tag(:q, nil, class:'form-control') %>
               <%= submit_tag("Search", class:'btn btn-default')%>
           <% end %>
-          <ul class="nav pull-right">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              </span><%=link_to ('<span class="glyphicon glyphicon-step-backward"></span> Back').html_safe, :back %>
+            </li>
             <li>
               <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <%= link_to(('<span class="glyphicon glyphicon-remove"></span> Logout').html_safe, destroy_user_session_path, :method => :delete) %>
               <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
+                  <%= link_to(('<span class="glyphicon glyphicon-ok"></span> Login').html_safe, new_user_session_path) %>
               <% end %>
             </li>
           </ul>
@@ -65,19 +68,16 @@
       <p id="alert" class="alert alert-info"><%= alert %></p>
     <% end %>
 
-    <div class="container">
-      <%=link_to 'Back', :back %>
-    </div>
 	  
     <div class="container">
+
       <%= yield %>
     </div><!--end container-->
 
     <footer class="footer">
       <div class="container-fluid">
         <hr>
-
-        <div class="col-md-8 col-xs-12">
+        <div class="col-md-6">
           <ul class="footer-links list-group pull-left">
             <li class="list-group-item"><%= link_to "Home", root_path %></li>
             <li class="list-group-item"><%= link_to "About me", static_pages_about_path %></li>
@@ -87,7 +87,7 @@
           </ul>
         </div>
 
-        <div class="col-md-4 col-xs-12">
+        <div class="col-md-6">
           <p class="pull-right">&copy; Jay</p>
         </div>
 
