@@ -20,6 +20,4 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page', to: 'static_pages#landing_page'
 
-
-
 end
