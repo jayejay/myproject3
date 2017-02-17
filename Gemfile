@@ -60,3 +60,7 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'bcrypt-ruby'
+
+group :development, :test do
+  gem 'rspec-rails', '~>3.5'
+end
