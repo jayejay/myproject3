@@ -11,7 +11,7 @@ load_and_authorize_resource
   end
 
   def new
-
+    @order = Order.new
   end
 
   def create
