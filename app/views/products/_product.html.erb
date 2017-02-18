@@ -6,7 +6,7 @@
 
     <p><strong>Available Mediums:</strong> <%=product.mediums%></p>
 
-    <p><strong>Price: </strong><%= product.price %>$</p>
+    <p><strong>Price: </strong><%= (product.price/100).to_d %>$</p>
     <div class="rated stars" data-score="<%=	product.average_rating  %>"></div>
     <hr>
     <%= image_tag(product.image_url, class: "img-responsive") %>
