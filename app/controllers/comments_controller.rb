@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
+    logger.debug "Text of the new Comment: #{@comment.body}"
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
