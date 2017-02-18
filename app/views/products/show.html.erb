@@ -1,35 +1,44 @@
 <p id="notice"><%= notice %></p>
 
+<div class="col-md-4 col-xs-12">
 
-    <div class="product col-md-6">
-      <p>
-        <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
+  <div>
+    <%= image_tag(@product.image_url, class: "thumbnail img-responsive") %>
+  </div>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @product.description %>
-      </p>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 
-      <p>
-        <strong>Medium:</strong>
-        <%= @product.mediums %>
-      </p>
+</div>
 
-      <p>
-        <strong>Price:</strong>
-        <%= @product.price %>$
-      </p>
+<div class="product_show col-md-8 col-xs-12">
+  <p>
 
-   </div>
+    <h4><%= @product.name %></h4>
+  </p>
 
-  <div class="col-md-6">
-    <div>
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
-    </div>
+  <p>
+    <%= @product.description %>
+  </p>
 
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
+  <p>
+    <span class="glyphicon glyphicon-floppy-disk">
+    </span><%= " " + @product.mediums %>
+  </p>
 
+  <p>
+    <span class="glyphicon glyphicon-eur"></span>
+    <%= @product.price %>
+  </p>
+
+  <p>Average Rating: <div class="rated stars" data-score="<%= @product.average_rating %>"></div> </p>
+
+</div>
+
+<div class="reviews row clearfix col-md-12">
+
+
+  <%=	 render "comments/new_comment" %>
+  <h4>Reviews</h4>
+  <%=	 render "comments/comments" %>
 </div>

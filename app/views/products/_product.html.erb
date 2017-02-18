@@ -7,15 +7,20 @@
     <p><strong>Available Mediums:</strong> <%=product.mediums%></p>
 
     <p><strong>Price: </strong><%= product.price %>$</p>
-
+    <div class="rated stars" data-score="<%=	product.average_rating  %>"></div>
+    <hr>
     <%= image_tag(product.image_url, class: "img-responsive") %>
 
     <div class="buttons">
 
       <%= link_to 'Show', product, :class => 'btn btn-success' %>
-      <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-warning' %>
-      <%= link_to 'Destroy', product, :class => 'btn btn-danger', method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
+      <% if signed_in? && current_user.admin? %>
+
+        <%= link_to 'Edit', edit_product_path(product), :class => 'btn btn-warning' %>
+        <%= link_to 'Destroy', product, :class => 'btn btn-danger', method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+
+      <% end %>
     </div>
   </div>
 

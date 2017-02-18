@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.product{ background-color: rgb(225, 229, 237); }
+.product_show{
+  background-color: rgba(225, 229, 237, 0.2);
+  padding-top: 0%;
+}
 
 .products-row{
   margin-top: 1%;
@@ -13,13 +16,56 @@
   padding: 1%;
 }
 
-@media only screen and (min-width:988px){
-  .product-column{
-    min-height: 575px;
-  }
+.product-reviews .row hr{width: 95%;
 }
+
+.reviews{margin-top: 2%;}
+
+.reviews h4{
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.5);
+}
+
+//@media only screen and (min-width:988px){
+//  .product-column{
+//    min-height: 575px;
+//  }
+//}
 
 .buttons{
   position: absolute;
   bottom: 5%;
+}
+
+.apple_pagination {
+  background-color: rgba(225, 229, 237, 0.2);
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+.apple_pagination a, .apple_pagination span {
+  padding: 0.2em 0.3em;
+}
+.apple_pagination .disabled {
+  color: #aaaaaa;
+}
+.apple_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background-color: #bebebe;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+.apple_pagination a {
+  text-decoration: none;
+  color: black;
+}
+.apple_pagination a:hover, .apple_pagination a:focus {
+  text-decoration: underline;
 }
