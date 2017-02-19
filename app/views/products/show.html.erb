@@ -13,14 +13,16 @@
 </div>
 
 <div class="product_show col-md-8 col-xs-12">
-  <p>
 
-    <h4><%= @product.name %></h4>
-  </p>
+  <% cache @product do %>
+    <p>
+      <h4><%= @product.name %></h4>
+    </p>
 
-  <p>
-    <%= @product.description %>
-  </p>
+    <p>
+      <%= @product.description %>
+    </p>
+  <% end %>
 
   <p>
     <span class="glyphicon glyphicon-floppy-disk">
