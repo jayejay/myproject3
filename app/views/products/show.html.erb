@@ -39,7 +39,15 @@
     <%= (@product.price / 100).to_d %>
   </p>
 
-  <p>Average Rating: <div id="average_rating" class="rated stars" data-score="<%= @product.average_rating %>"></div> </p>
+  <p>Average Rating: <div id="average_rating" class="rated stars" data-score="<%= @product.average_rating %>"></div></p>
+
+  <h6>
+    Views:
+    <span class="badge">
+    <%= @product.views %>
+  </span>
+  </h6>
+
 
   <% if user_signed_in? %>
     <%= form_tag "/payments/create" do %>
