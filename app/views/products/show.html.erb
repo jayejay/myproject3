@@ -1,69 +1,74 @@
 <p id="notice"><%= notice %></p>
 
-<div class="col-md-4 col-xs-12">
+<div class="row" data-product-id="<%=	 @product.id %>">
 
-  <div>
-    <%#= image_tag(@product.image_url, width:"350px", data_zoom_image: image_path("large/" + @product.image_url),
-                  class: "thumbnail image-zoom img-responsive") %>
+  <div class="col-md-4 col-xs-12">
 
-    <img src="<%= image_path(@product.image_url) %>" width="350px" alt=""
-         data-zoom-image = "<%= image_path("large/" + @product.image_url) %>"
-         class="thumbnail image-zoom img-responsive">
-    
+    <div>
+      <%#= image_tag(@product.image_url, width:"350px", data_zoom_image: image_path("large/" + @product.image_url),
+                    class: "thumbnail image-zoom img-responsive") %>
+
+      <img src="<%= image_path(@product.image_url) %>" width="350px" alt=""
+           data-zoom-image = "<%= image_path("large/" + @product.image_url) %>"
+           class="thumbnail image-zoom img-responsive">
+
+    </div>
+
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+
   </div>
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+  <div class="product_show col-md-8 col-xs-12">
 
-</div>
+    <% cache @product do %>
+      <p>
+        <h4><%= @product.name %></h4>
+      </p>
 
-<div class="product_show col-md-8 col-xs-12">
-
-  <% cache @product do %>
-    <p>
-      <h4><%= @product.name %></h4>
-    </p>
-
-    <p>
-      <%= @product.description %>
-    </p>
-  <% end %>
-
-  <p>
-    <span class="glyphicon glyphicon-floppy-disk">
-    </span><%= " " + @product.mediums %>
-  </p>
-
-  <p>
-    <span class="glyphicon glyphicon-eur"></span>
-    <%= (@product.price / 100).to_d %>
-  </p>
-
-  <p>Average Rating: <div id="average_rating" class="rated stars" data-score="<%= @product.average_rating %>"></div></p>
-
-  <h6>
-    Views:
-    <span class="badge">
-    <%= @product.views %>
-  </span>
-  </h6>
-
-
-  <% if user_signed_in? %>
-    <%= form_tag "/payments/create" do %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
+      <p>
+        <%= @product.description %>
+      </p>
     <% end %>
-  <% end %>
+
+    <p>
+      <span class="glyphicon glyphicon-floppy-disk">
+      </span><%= " " + @product.mediums %>
+    </p>
+
+    <p>
+      <span class="glyphicon glyphicon-eur"></span>
+      <%= (@product.price / 100).to_d %>
+    </p>
+
+    <p>Average Rating: <div id="average_rating" class="rated stars" data-score="<%= @product.average_rating %>"></div></p>
+
+    <h6>
+      Views:
+      <span class="badge">
+      <%= @product.views %>
+    </span>
+    </h6>
+
+
+    <% if user_signed_in? %>
+      <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
+    <% end %>
+
+  </div>
+
 </div>
 
 <div class="reviews row clearfix col-md-12">
 
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 
   <%=	 render "comments/new_comment" %>
-  <h4>Reviews</h4>
 
-  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+  <h4>Reviews</h4>
 
   <%=	 render "comments" %>
 </div>
