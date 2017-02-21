@@ -14,8 +14,16 @@
 
     </div>
 
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %>
+
+    <% if signed_in? && current_user.admin? %>
+
+        <%= link_to 'Edit', edit_product_path(@product), :class => 'btn btn-default' %>
+        <%= link_to 'Destroy', @product, :class => 'btn btn-danger', method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+
+    <% end %>
+
+    <%= link_to 'Back', products_path, class:'btn btn-default' %>
 
   </div>
 
@@ -23,7 +31,7 @@
 
     <% cache @product do %>
       <p>
-        <h4><%= @product.name %></h4>
+        <h3><%= @product.name %></h3>
       </p>
 
       <p>

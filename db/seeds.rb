@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create(:name => "Game 1", :description => "A flight simulator", :image_url => "software.jpg")
+Product.create(:name => "Game 1", :description => "A flight simulator", :image_url => "software.png")

@@ -12,5 +12,35 @@
 
 .carousel-caption p{
   font-size: 1.5em;
-  color: silver;
+  color: white;
+}
+
+#myCarousel{
+  background-color: rgba(0,0,0,0.3);
+}
+
+#name, #message, #email{
+  background-color:rgba(255,255,255,0.9);
+}
+
+.about-page{
+  background-color: rgba(0,0,0,0.5);
+  padding: 2%;
+}
+
+.about-page p{
+  font-size:1.5em;
+}
+
+#home{
+  background-color: rgba(0,0,0,0.5);
+}
+
+#home p{
+  font-size: 1.5em;
+}
+
+#home h1, #home p{
+  text-align: center;
+
 }

@@ -2,7 +2,6 @@
 
 <h1>Software-Products</h1>
 
-<div class="container">
   <div class="row products-row">
 
 
@@ -14,8 +13,9 @@
 
 
   </div>
-</div>
-<br>
 
-<%= link_to 'New Product', new_product_path, :class => 'btn btn-default' %>
+<br>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'New Product', new_product_path, :class => 'btn btn-default' %>
+<% end %>
 

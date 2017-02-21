@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root 'static_pages#landing_page'
+  root 'static_pages#home'
 
   resources :products do
     resources :comments
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'static_pages/contact', to: 'static_pages#contact'
 
   get 'static_pages/landing_page', to: 'static_pages#landing_page'
+
+  get 'static_pages/home', to: 'static_pages#home'
 
   post 'payments/create'
 

@@ -4,7 +4,7 @@ describe Product do
   context "when the product has comments" do
     before do
       @product = Product.create!(name:"Test-Software", description: "Software for tests",
-                                 mediums:"DVD", price: 77, image_url: "software.jpg")
+                                 mediums:"DVD", price: 77, image_url: "software.png")
       @user = FactoryGirl.create(:user)
       @product.comments.create!(rating:1, user: @user, body: "Bad Software")
       @product.comments.create!(rating:3, user: @user, body: "Normal Software")

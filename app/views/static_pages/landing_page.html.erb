@@ -1,4 +1,4 @@
-<h2>Featured Product:</h2>
+<h2>Featured Products:</h2>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -17,7 +17,9 @@
 
       <div class="item<%= " active" if product == @featured_product.first %>">
 
-        <%=image_tag(product.image_url)%>
+        <%#=image_tag(product.image_url)%>
+
+        <img src="<%= image_path(product.image_url) %>" alt="<%= product.image_url %>">
 
         <div class="carousel-caption">
            <p><%= product.name %></p>
