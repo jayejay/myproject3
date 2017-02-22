@@ -2,7 +2,10 @@
   <% @comments.each do |comment| %>
     <%= render comment %>
   <% end %>
-  <div class="apple_pagination">
+  <% if @comments.count() > 5  %>
+    <div class="apple_pagination">
+
     <%= will_paginate @comments %>
+  <% end %>
   </div>
 </div>
