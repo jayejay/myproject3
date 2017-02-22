@@ -40,8 +40,10 @@ ul{
 }
 
 .navbar-default{
-	/*background-color: rgba(0,0,0,0.4);*/
-    background-color: transparent;
+  /*background-color: rgba(0,0,0,0.4);*/
+  background-color: transparent;
+  transition: background-color 1s linear;
+
 }
 
 .navbar-nav li:hover{

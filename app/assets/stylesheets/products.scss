@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#link_to_product{
+  text-decoration: none;
+}
+
 .product_show{
   padding-top: 0%;
   color: rgba(255,255,255,1);
