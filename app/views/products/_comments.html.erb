@@ -4,8 +4,7 @@
   <% end %>
   <% if @comments.count() > 5  %>
     <div class="apple_pagination">
-
-    <%= will_paginate @comments %>
+      <%= will_paginate @comments %>
+    </div>
   <% end %>
-  </div>
 </div>

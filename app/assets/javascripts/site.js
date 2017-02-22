@@ -30,7 +30,7 @@ $(document).on('turbolinks:load ajaxSuccess',function(){
         $(document).scroll(function () {
             scroll_start = $(this).scrollTop();
             if (scroll_start > offset.top) {
-                $(".navbar-default").css('background-color', 'rgba(0,0,0,0.6)');
+                $(".navbar-default").css('background-color', 'rgba(0,0,0,0.5)');
                 $('.navbar').css('border-bottom', '1px solid rgba(255,255,255,0.7)');
             } else {
                 $('.navbar-default').css('background-color', 'transparent');

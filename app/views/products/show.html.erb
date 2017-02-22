@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row" data-product-id="<%=	 @product.id %>">
+<div class="row product_show" data-product-id="<%=	 @product.id %>">
 
   <div class="col-md-4 col-xs-12">
 
@@ -27,7 +27,7 @@
 
   </div>
 
-  <div class="product_show col-md-8 col-xs-12">
+  <div class="col-md-8 col-xs-12">
 
     <% cache @product do %>
       <p>
@@ -80,3 +80,5 @@
 
   <%=	 render "comments" %>
 </div>
+
+
