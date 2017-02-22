@@ -2,22 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#link_to_product{
-  text-decoration: none;
-}
 
-.product_show{
-  padding-top: 0%;
-  color: rgba(255,255,255,1);
-  padding-bottom: 2%;
-}
-
-.product_show, .reviews{
-  background-color: rgba(128, 128, 128, 0.6);
-}
-
-.product_show p{font-size: 1.5em;}
-
+//product#index
 .products-row{
   margin-top: 1%;
 }
@@ -25,25 +11,8 @@
 .product-column{
   margin-top:2%;
   padding: 1%;
-}
+  min-height: 438px;
 
-.reviews{
-  color: white;
-  font-size:1.5em;
-}
-
-.reviews p{font-size:1.2em;}
-
-.reviews #user_comment{font-size:1em;}
-
-
-.product-reviews .row hr{width: 95%;
-}
-
-.reviews{margin-top: 2%;}
-
-.reviews h4{
-  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.5);
 }
 
 .thumbnail{
@@ -73,13 +42,6 @@
   transform: scale(1.05);
 }
 
-
-//@media only screen and (min-width:988px){
-//  .product-column{
-//    min-height: 575px;
-//  }
-//}
-
 .product_index_pic{
   max-height: 180px;
 }
@@ -89,19 +51,55 @@
   bottom: 5%;
 }
 
+
+#link_to_product{
+  text-decoration: none;
+}
+
+//product#show
+.product_show{
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+.product_show, .reviews{
+  background-color: rgba(128, 128, 128, 0.6);
+
+
+.reviews{
+  font-size:1.5em;
+}
+
+.reviews p{font-size:1.2em;}
+
+.reviews #user_comment{font-size:1em;}
+
+
+.product-reviews .row hr{width: 95%;
+}
+
+.reviews{margin-top: 2%;}
+
+.reviews h4{
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.5);
+}
+
+}
+
+.product_show p{font-size: 1.5em;}
+
+
 .apple_pagination {
-  background-color: rgba(225, 229, 237, 0.2);
-  border: 1px solid #e5e5e5;
+  background: rgba(255,255,255,0.5);
+  border: 0;//1px solid #e5e5e5;
   text-align: center;
   padding: 1em;
   cursor: default;
 }
-.apple_pagination a, .apple_pagination span {
-  padding: 0.2em 0.3em;
-}
-.apple_pagination .disabled {
-  color: #aaaaaa;
-}
+
+.apple_pagination a, .apple_pagination span { padding: 0.2em 0.3em; }
+
+.apple_pagination .disabled {color: #aaaaaa;}
 .apple_pagination .current {
   font-style: normal;
   font-weight: bold;
@@ -115,10 +113,11 @@
   border-radius: 1em;
   text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
 }
+
 .apple_pagination a {
   text-decoration: none;
   color: black;
 }
-.apple_pagination a:hover, .apple_pagination a:focus {
-  text-decoration: underline;
+
+.apple_pagination a:hover, .apple_pagination a:focus {text-decoration: underline;
 }

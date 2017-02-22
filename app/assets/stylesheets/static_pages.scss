@@ -2,27 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.carousel-indicators li{
-  border: 1px solid rgb(0,0,0);
-}
+//Bootstrap Carousel
+.carousel-indicators li{border: 1px solid rgb(0,0,0);}
 
-.carousel-indicators .active{
-  background-color: rgba(0,0,0,0.1);
-}
+.carousel-indicators .active{background-color: rgba(0,0,0,0.3);}
 
 .carousel-caption p{
   font-size: 1.5em;
   color: white;
 }
 
-#myCarousel{
-  background-color: rgba(0,0,0,0.3);
+#myCarousel{background-color: rgba(0,0,0,0.5);}
+
+#name, #message, #email{background-color:rgba(255,255,255,0.9);}
+
+.carousel-image{
+  margin: auto;
 }
 
-#name, #message, #email{
-  background-color:rgba(255,255,255,0.9);
-}
-
+//static_pages#about
 .about-page{
   background-color: rgba(0,0,0,0.5);
   padding: 2%;
@@ -32,15 +30,9 @@
   font-size:1.5em;
 }
 
-#home{
-  background-color: rgba(0,0,0,0.5);
-}
+//static_pages#home
+#home{background-color: rgba(0,0,0,0.5);}
 
-#home p{
-  font-size: 1.5em;
-}
+#home p{font-size: 1.5em;}
 
-#home h1, #home p{
-  text-align: center;
-
-}
+#home h1, #home p{text-align: center;}
