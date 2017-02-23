@@ -8,10 +8,8 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
-      puts 'hello'
     else
-      #@products = Product.all
-      puts 'bye'
+      @products = Product.find(1)
     end
 
   end
