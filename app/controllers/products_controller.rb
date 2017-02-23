@@ -7,9 +7,11 @@ class ProductsController < ApplicationController
 
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      #@products = Product.search(search_term)
+      @products.find(1)
     else
-      @products = Product.find(1)
+      @products = Product.all
+
     end
 
   end
