@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
       @products.find(1)
     else
       @products = Product.all
-
+      @products.find(1)
     end
 
   end
