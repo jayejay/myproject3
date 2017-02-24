@@ -12,4 +12,12 @@ describe User do
 
   end
 
+  context "Passwort is missing" do
+
+    it "is not valid" do
+      expect(User.new(password:"")).not_to be_valid
+    end
+
+  end
+
 end
