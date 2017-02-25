@@ -13,7 +13,6 @@ FactoryGirl.define do
     image_url "dvd.png"
     mediums "Download"
     price "10000"
-
   end
 
 end

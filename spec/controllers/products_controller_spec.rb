@@ -31,7 +31,7 @@ describe ProductsController, :type => :controller do
       @product = FactoryGirl.create(:product)
     end
 
-      it "Correct Product is shown" do
+      it "correct Product is shown" do
         get :show, params:{id: @product.id}
 
         expect(response).to have_http_status(200)
@@ -55,6 +55,18 @@ describe ProductsController, :type => :controller do
     it "creates a new Product" do
       post :new
       expect(assigns(:product)).to be_a_new(Product)
+    end
+
+  end
+
+  describe 'POST #create' do
+
+    context 'Sending valid data' do
+
+      it 'creates a new product' do
+        expect{post :create, product: FactoryGirl.attributes_for(:product)}.to change(Product, :count).by(1)
+      end
+
     end
 
   end
